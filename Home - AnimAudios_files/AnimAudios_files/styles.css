@@ -1,0 +1,467 @@
+:root {
+    --primary-bg-color: #f2f2f2;
+    --secondary-bg-color: #f9f9f9;
+    --primary-text-color: rgb(0, 0, 0);
+    --secondary-text-color: rgb(104, 104, 104);
+    --accent-color: #ffd900;
+    --accent-hover-color: #ff7738;
+    --border-color: #a8a8a8;
+    --line-color: rgba(0, 0, 0, 0.1);
+    --backdrop-color: #d1d1d1;
+    --outline-color: #a7a7a7;
+    --hr-color: #000000; /* Default color for hr elements */
+    --default-spacing: 25px;
+}
+
+/* Light Mode */
+body {
+    padding: 5px 10px;
+    background-color: var(--primary-bg-color);
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width:40em;
+    margin: 0 auto; /* This centers horizontally */
+}
+
+.centered {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.faint-line {
+    height: 1px;
+    background-color: var(--line-color);
+    margin: 20px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.button-container button, .single-button button {
+    padding: 10px 20px;
+    font-size: 13px;
+    border-radius: 12px;
+    border: 2px solid var(--accent-hover-color);
+    background-color: var(--accent-color);
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 300;
+}
+
+.single-button {
+    margin-bottom: 20px;
+}
+
+.button-container button:hover, .single-button button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2, h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+hr {
+    display: block;
+    max-width:600px;
+    margin:25px auto;
+
+    border-width: 0.5px; /* Make the line thinner */
+    /* border-color: var(--hr-color); 
+    background-color: var(--hr-color);  */
+}
+
+.hr2 {
+    display: block;
+    border-width: 0.5px; /* Make the line thinner */
+    /* border-color: var(--hr-color); 
+    background-color: var(--hr-color);  */
+    margin:25px auto;
+}
+
+.hr3 {
+    display: block;
+    border-width: 0.5px; /* Make the line thinner */
+    /* border-color: var(--hr-color);
+    background-color: var(--hr-color);  */
+    width: 80%;
+    margin:25px auto;
+}
+
+.hrBox {
+    max-width:15em;
+    margin: 0 auto;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    font-size: 15px;
+    background-color: var(--accent-color);
+    max-width: 80px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 10px;
+    border-bottom: 1px solid var(--accent-hover-color);
+}
+
+.hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    max-width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border-style: solid;
+    border-radius: 5px;
+    position: relative; /* Changed to relative positioning */
+    border-color: var(--accent-hover-color);
+}
+
+.hamburger:hover {
+    background-color: var(--accent-hover-color);
+}
+
+.hamburger span {
+    font-size: 30px;
+}
+
+.menu.active {
+    display: block;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.animation-title {
+    color: black;
+    font-weight: bold;
+}
+
+.donation-Backdrop {
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 40rem;
+    padding:5px;
+    background-color: var(--backdrop-color);
+    border: 2px solid var(--outline-color);
+    font-size: .9rem;
+}
+
+.update-Backdrop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 5px;
+    max-width: 250px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-hover-color);
+    margin-bottom: var(--default-spacing);
+    font-weight: bold;
+}
+
+.paragraph-backdrop {
+    position: relative;
+    border-radius: 8px;
+    display: block;
+    background-color: var(--backdrop-color);
+    padding: 15px;
+    max-width: 260px;
+    word-wrap: break-word;
+    margin: 10px auto;
+    margin-top: 15px;
+    text-align: left;
+    outline: 2px solid var(--outline-color);
+    font-size: 14px;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: rgb(255, 136, 0);
+}
+
+a {
+    color: var(--primary-text-color);
+}
+
+.tags {
+    position: relative;
+    border-radius: 8px;
+    display: block;
+    background-color: #e2e2e2;
+    padding: 13px;
+    width: auto;
+    word-wrap: break-word;
+    margin: 1px auto;
+    text-align: left;
+    outline: 2px solid #c9c9c9;
+    font-size: 13px;
+    color: var(--secondary-text-color);
+}
+
+/* 
+.top-Bar {
+    position: relative;
+    border-radius: 8px;
+    display: block;
+    background-color: #e2e2e2;
+    padding: 13px;
+    width: 600px;
+    word-wrap: break-word;
+    margin: 1px auto;
+   
+    outline: 2px solid #c9c9c9;
+  
+    
+} */
+
+#boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    gap: var(--default-spacing);
+    max-width: 80em;
+    margin: 0 auto;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    color: black;
+    background-color: var(--secondary-bg-color);
+    border-radius: 8px;
+    max-width: 280px;
+    height: 280px;
+    margin-bottom: var(--default-spacing);
+}
+
+audio {
+    max-width: 260px; /* Adjust as needed */
+}
+
+.button-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.filter-button {
+    background-color: var(--accent-color);
+    border: 2px solid rgb(255, 136, 0);
+    color: var(--primary-text-color);
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 2px 2px;
+    min-width: 60px; /* This allows the button to expand if the text is longer */
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+    padding: 5px 10px; /* Adjust padding for better appearance */
+    border-radius: 4px;
+}
+
+.filter-button:hover {
+    background-color: rgb(255, 136, 0);
+    border: 2px solid rgb(255, 136, 0);
+    color: var(--primary-text-color);
+}
+
+.button-container3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+}
+
+.filter-button-backdrop {
+    display: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 5px;
+    max-width: 32em;
+    height: auto;
+    background-color: var(--secondary-bg-color);
+    border: 2px solid var(--border-color);
+    margin-top: 1%;
+    margin-bottom: 1.3%;
+}
+
+.box-title {
+    color: rgb(0, 0, 0);
+}
+
+/* Light Mode (Default) */
+.pages {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0); /* Default to black text in light mode */
+}
+
+.pages p {
+    color: rgb(0, 0, 0); /* Black text in light mode */
+}
+
+.pages a {
+    text-decoration: underline;
+    color: rgb(0, 0, 0); /* Black links in light mode */
+}
+
+.pages a.active {
+    color: #ff7738; /* Black links in light mode */
+}
+
+.pages a:hover {
+    color: #ff7738; /* White color on hover */
+}
+
+.tag-title {
+    color: #000000;
+}
+
+.switchIcon {
+    cursor: pointer;
+    position: relative;
+    width: 100%
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --primary-bg-color: rgb(54, 54, 58);
+    --secondary-bg-color: #343235;
+    --third-text-color: rgb(255, 255, 255);
+    --color: #faf8fc;
+    --global-text-color: rgb(255, 255, 255); /* Global text color for dark mode */
+    --hr-color: #000000;
+    --border-color: #202020;
+    --line-color: rgba(0, 0, 0, 0.1);
+    --accent-color: #ffc400;
+    --accent-hover-color: #ff7738;
+
+
+    /* Apply the text color based on the mode */
+    .pages {
+        color: var(--global-text-color); /* Use white text in dark mode */
+    }
+
+    .pages p {
+        color: var(--global-text-color); /* White text in dark mode */
+    }
+
+    .pages a {
+        color: var(--global-text-color); /* White links in dark mode */
+    }
+
+    .pages a:hover {
+        color: #ffd900;
+    }
+
+    /* Optional: Additional styles for other parts of dark mode */
+    hr {
+        border-width: 0.5px;
+        border-color: var(--hr-color);
+        background-color: var(--hr-color);
+        color: var(--hr-color);
+    }
+
+    .pages a.active {
+        color: #ff7738; /* Black links in light mode */
+    }
+
+    .animation-title {
+        color: #d1d1d1; /* Light color for animation title in dark mode */
+    }
+
+    .box-title {
+        color:  #d1d1d1; /* White text for box titles in dark mode */
+    }
+
+
+    #tag-title {
+        color: #d1d1d1;
+    }
+
+    .filter-button:hover {
+        background-color: #ff7738;
+        border: 2px solid #ff7738;
+    }
+
+    .filter-button {
+        background-color: #ffc400;
+        border: 2px solid #ff7738;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    /* .button-container, .button-container2, .button-container3 {
+        align-items: center;
+    }
+
+    hr, .hr2, .hr3 {
+        width: 80%;
+    }
+
+    #boxes-container {
+        align-items: center;
+    } */
+
+}
+
+@media only screen and (max-width: 500px) {
+    #top-image {
+        width: 10rem !important;
+    }
+
+    audio, .paragraph-backdrop{
+        max-width:260px;
+    }
+}
